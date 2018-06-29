@@ -22,6 +22,13 @@ end
 
 class EsqueciSenha < SitePrism::Page
     element :esqueci_email, '#email_address'
+    element :enviar, 'button[title="Enviar"]'
     #element :botao_senha, 'a[href="https://secure.marabraz.com.br/customer/account/forgotpassword/"]'
+
+
+    def enviar_senha (email)
+        esqueci_email.set email
+        enviar.click
+    end
 
 end 
