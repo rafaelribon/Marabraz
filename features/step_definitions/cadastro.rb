@@ -8,7 +8,9 @@ Quando("clico em Criar uma Conta") do
 end
   
 Quando("preencho o formulario") do
-    
+  @cadastro.cadastrar()
+  sleep 20
+  
 end
   
 Então("o cadastro sera realizado") do

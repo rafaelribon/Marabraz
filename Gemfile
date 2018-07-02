@@ -5,3 +5,5 @@
     gem 'rspec'
     gem 'selenium-webdriver'
     gem 'site_prism'
+    gem "faker"
+    gem "cpf_faker"

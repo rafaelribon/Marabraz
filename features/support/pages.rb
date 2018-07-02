@@ -52,8 +52,31 @@ class Home <SitePrism::Page
 end 
 
 class Cadastro <SitePrism::Page
-    
-   
+    element :email, '#email_address'
+    element :cpf, '#taxvat'
+    element :nome, '#firstname'
+    element :sobrenome, '#lastname'
+    element :data_nascimento, '#dob'
+    #element :sexo
+    element :senha, '#password'
+    element :confirmar_senha, '#confirmation'
+    element :cep, '#zip'
+
+    def cadastrar ()
+        nome.set(Faker::Name.name)
+        sobrenome.set(Faker::Name.last_name)
+        email.set(Faker::Internet.email('teste'))
+        cpf.set(Faker::CPF.numeric)
+        puts data = Faker::Date.birthday(18, 65)
+        #data_nascimento.set(Faker::Date.between_except(20.year.ago, 1.year.from_now, Date.today))
+        
+
+        
+
+        
+
+    end 
+        
 end
 
 
