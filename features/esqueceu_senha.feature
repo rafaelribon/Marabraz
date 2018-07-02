@@ -8,14 +8,14 @@ Funcionalidade: Esqueceu Senha
     #     Quando clico em Esqueci Minha Senha 
     #     Então deve exibir a tela  de Recuperação de Senha 
 
-    @release 
+    @senha 
     Cenario: Email Cadastro 
         Dado que estou no formulario de esqueceu a senha 
         Quando eu preencho o campo com 'rafael.ribon@fcamara.com.br'
         Então deve exibir a mensagem "Se houver uma conta associada a rafael.ribon@fcamara.com.br você receberá um email com um link para reconfigurar a sua senha"
         
 
-    @release 
+    @senha 
     Cenario: Email Não Cadastrado 
         Dado que estou no formulario de esqueceu a senha 
         Quando eu preencho o campo com "teste@ioteste.com.br"

@@ -32,3 +32,30 @@ class EsqueciSenha < SitePrism::Page
     end
 
 end 
+
+
+class Home <SitePrism::Page
+    element :lojas, '.nossas-lojas'
+    # element :central_antendimento, '.central-atendimento a[href="/sac/"]'
+    
+
+
+    def exibir_lojas()
+        lojas.click
+    end
+
+
+    # def atendimento()
+    #     central_antendimento.click_link
+    # end
+
+end 
+
+class Cadastro <SitePrism::Page
+    
+   
+end
+
+
+
+    

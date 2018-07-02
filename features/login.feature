@@ -17,7 +17,7 @@ Funcionalidade: Login
     @release 
     Cenario: Login Invalido 
         Dado que acesso o formulario de login 
-       Quando faço o login  com  "rafael.ribon@io.com.br" e "123456"
+        Quando faço o login  com  "rafael.ribon@io.com.br" e "123456"
         Então exibe a mensagem "Acesso ou senha inválida."
 
 

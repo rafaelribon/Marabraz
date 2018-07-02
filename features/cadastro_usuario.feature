@@ -1,20 +1,20 @@
 #language:pt
 
 Funcionalidade: Cadastro de PF 
-
+	@cadastro
 	Cenario: Cadastrar um Usuario
-        Dado acesso o formulario de cadastro 
-		Quando clico em Cadastrar-se
-		E preencho o formulario 
+        Dado que estou na tela de Identificação 
+		Quando clico em Criar uma Conta 
+		E  preencho o formulario 
 		Então o cadastro sera realizado 
 		
 		
-	Cenario: Cadastar um Usario via Facebook 
-        Dado acesso o formulario de cadastro 
-		Quando clico em Login
-		E clico em Conectar com Facebook
-		E preencho os dados 
-		Então o cadastro sera realizado 
+	# Cenario: Cadastar um Usario via Facebook 
+    #     Dado acesso o formulario de cadastro 
+	# 	Quando clico em Login
+	# 	E clico em Conectar com Facebook
+	# 	E preencho os dados 
+	# 	Então o cadastro sera realizado 
 		
 		
 	Cenario: Email ja cadastrado 

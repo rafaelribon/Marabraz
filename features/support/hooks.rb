@@ -3,6 +3,9 @@ Before  do
         @login_page = LoginPage.new
         @nav = NavBar.new
         @esqueci_senha = EsqueciSenha.new
+        @home = Home.new
+        @cadastro = Cadastro.new
+
 end 
 
 Before('@login') do 
