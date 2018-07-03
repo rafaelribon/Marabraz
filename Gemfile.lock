@@ -4,6 +4,7 @@ GEM
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     backports (3.11.3)
+    brcep (3.3.0)
     builder (3.2.3)
     capybara (3.3.1)
       addressable
@@ -78,6 +79,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  brcep
   capybara
   cpf_faker
   cucumber

@@ -57,28 +57,72 @@ class Cadastro <SitePrism::Page
     element :nome, '#firstname'
     element :sobrenome, '#lastname'
     element :data_nascimento, '#dob'
-    #element :sexo
+    element :sexo, 'select[name="gender"]'
     element :senha, '#password'
     element :confirmar_senha, '#confirmation'
     element :cep, '#zip'
+    element :numero, '#street_3'
+    element :telefone, "#telephone"
+    element :celular, "#fax"
+    element :btn_finalizar_cadastro, '.buttons-set button[type="submit"]'
 
+    # def seleciona_sexo(sexo)
+    #     .find('option', text: sexo).select_option
+    
+    
+    # end
+
+    def cadastro_cpf(cpf_cadastro)
+        nome.set(Faker::Name.name)
+        sobrenome.set(Faker::Name.last_name)
+        email.set(Faker::Internet.email('teste'))
+        cpf.set cpf_cadastro
+        data_nascimento.set(Faker::Date.birthday(18, 65).strftime("%d/%m/%Y"))
+       # sexo.seleciona_sexo()
+        senha.set('123456')
+        confirmar_senha.set('123456')
+        cep.set("06120-120")
+        numero.set(Faker::Number.number(4))
+        telefone.set(Faker::Number.number(10))
+        celular.set(Faker::Number.number(11))
+        btn_finalizar_cadastro.click
+    end
+   
+
+
+
+    def cadastro_email(email_cadastro)
+        nome.set(Faker::Name.name)
+        sobrenome.set(Faker::Name.last_name)
+        email.set email_cadastro
+        cpf.set(Faker::CPF.numeric)
+        data_nascimento.set(Faker::Date.birthday(18, 65).strftime("%d/%m/%Y"))
+       # sexo.seleciona_sexo()
+        senha.set('123456')
+        confirmar_senha.set('123456')
+        cep.set("06120-120")
+        numero.set(Faker::Number.number(4))
+        telefone.set(Faker::Number.number(10))
+        celular.set(Faker::Number.number(11))
+        btn_finalizar_cadastro.click
+    end
+
+
+    
     def cadastrar ()
         nome.set(Faker::Name.name)
         sobrenome.set(Faker::Name.last_name)
         email.set(Faker::Internet.email('teste'))
         cpf.set(Faker::CPF.numeric)
-        puts data = Faker::Date.birthday(18, 65)
-        #data_nascimento.set(Faker::Date.between_except(20.year.ago, 1.year.from_now, Date.today))
-        
+        data_nascimento.set(Faker::Date.birthday(18, 65).strftime("%d/%m/%Y"))
+       # sexo.seleciona_sexo()
+        senha.set('123456')
+        confirmar_senha.set('123456')
+        cep.set("06120-120")
+        numero.set(Faker::Number.number(4))
+        telefone.set(Faker::Number.number(10))
+        celular.set(Faker::Number.number(11))
+        btn_finalizar_cadastro.click
 
-        
-
-        
-
-    end 
-        
+    end     
 end
-
-
-
-    

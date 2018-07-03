@@ -1,12 +1,12 @@
 #language:pt
 
 Funcionalidade: Cadastro de PF 
-	@cadastro
+	@cadastro @logout
 	Cenario: Cadastrar um Usuario
         Dado que estou na tela de Identificação 
 		Quando clico em Criar uma Conta 
 		E  preencho o formulario 
-		Então o cadastro sera realizado 
+		Então deve apresentar a mensagem "Obrigado por se registrar com Marabraz."
 		
 		
 	# Cenario: Cadastar um Usario via Facebook 
@@ -16,14 +16,16 @@ Funcionalidade: Cadastro de PF
 	# 	E preencho os dados 
 	# 	Então o cadastro sera realizado 
 		
-		
+	@cadastro 
 	Cenario: Email ja cadastrado 
-		Dado que já possui um cadastro com esse email 
-		Quando realizo um novo cadastrado utilizando esse email 
-		Então deve exibir a mensagem 
+		Dado que estou na tela de Identificação 
+		Quando clico em Criar uma Conta 
+		E realizo um novo cadastrado utilizando o email 'rafael.ribon@fcamara.com.br'
+		Então deve exibir a mensagem "Já existe uma conta com este endereço de email."
 		
-	
+	@gerar
 	Cenario: CPF já cadastrado 
-        Dado que já possui um cadastro com esse CPF 
-		Quando realizo um novo cadastrado utilizando esse CPF 
-		Então deve exibir a mensagem 
+		Dado que estou na tela de Identificação 
+		Quando clico em Criar uma Conta 
+        E realizo um novo cadastrado utilizando esse CPF "868.059.940-98"
+		Então deve exibir a mensagem "TEste"
